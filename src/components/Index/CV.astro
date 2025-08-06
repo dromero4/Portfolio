@@ -1,0 +1,21 @@
+---
+//Descargar cv
+---
+<div class="flex justify-center items-center">
+    <button id="download-cv"
+    class="-mt-5 z-10 py-2 bg-cyan-700 rounded-xl w-72 h-12 hover:bg-cyan-600 transition-all duration-300
+    cursor-pointer">
+        Download CV
+    </button>
+</div>
+
+<script>
+    document.getElementById('download-cv')?.addEventListener("click", () =>{
+    const link = document.createElement('a');
+    link.href = '../../public/CV/cv.pdf'; // Ruta al archivo PDF del CV
+    link.download = 'David_Romero_CV.pdf'; // Nombre del archivo descargado
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+})
+</script>
